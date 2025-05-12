@@ -1,58 +1,57 @@
-public class Usuario {
+public class Usuario { // Define la clase Usuario que encapsula los datos de un usuario.
+    // Atributos privados (encapsulados)
+    private String nombres; // Almacena el nombre del usuario.
+    private String apellidos; // Almacena los apellidos del usuario.
+    private int edad; // Almacena la edad del usuario.
+    private int fechaNacimiento; // Almacena el año de nacimiento del usuario.
 
-    // Propiedades del objeto
-    private String nombre;
-    private String apellidos;
-    private int edad;
-    private int fechaNacimiento;
-
-    // Metodo Constructor 
-    public Usuario(String nombre, String apellidos, int edad, int fechaNacimiento){
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.edad = edad;
-        this.fechaNacimiento = fechaNacimiento;
+    // Constructor de la clase
+    public Usuario(String nombres, String apellidos, int edad, int fechaNacimiento) {
+        this.nombres = nombres; // Inicializa el atributo nombres con el valor proporcionado.
+        this.apellidos = apellidos; // Inicializa el atributo apellidos con el valor proporcionado.
+        this.edad = edad; // Inicializa el atributo edad con el valor proporcionado.
+        this.fechaNacimiento = fechaNacimiento; // Inicializa el atributo fechaNacimiento con el valor proporcionado.
     }
 
-    //Metodo gets
-    public int getEdad(){
-        return this.edad;
+    // Métodos getter y setter para los atributos
+
+    public String getNombres() { // Devuelve el valor del atributo nombres.
+        return nombres;
     }
 
-    public String getNombres(){
-        return this.nombre;
+    public void setNombre(String nombres) { // Establece un nuevo valor para el atributo nombres.
+        this.nombres = nombres;
     }
 
-    public String getApellidos(){
-        return this.apellidos;
-    }
-    
-    public int getFechaNacimiento(){
-        return this.fechaNacimiento;
+    public String getApellidos() { // Devuelve el valor del atributo apellidos.
+        return apellidos;
     }
 
-    //Metodos sets
-    public void setNombre(String nombre){
-        this.nombre = nombre;
-    }
-
-    public void setApellidos(String apellidos) {
+    public void setApellidos(String apellidos) { // Establece un nuevo valor para el atributo apellidos.
         this.apellidos = apellidos;
     }
 
-    public void setEdad(int edad) {
+    public int getEdad() { // Devuelve el valor del atributo edad.
+        return edad;
+    }
+
+    public void setEdad(int edad){ // Establece un nuevo valor para el atributo edad.
         this.edad = edad;
     }
     
-    public void setFechaNacimiento(int fechaNacimiento) {
+    public int getFechaNacimiento() { // Devuelve el valor del atributo fechaNacimiento.
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(int fechaNacimiento) { // Establece un nuevo valor para el atributo fechaNacimiento.
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    // Metodos
-    public void mostrarDatos(){
-        System.out.println("Nombre:"+ nombre);
-        System.out.println("Apellidos:"+ apellidos);
-        System.out.println("Edad:"+ edad);
-        System.out.println("Fecha de Nacimiento:"+fechaNacimiento);
+    public void mostrarDatos() { // Muestra todos los datos del usuario en la consola.
+        System.out.println("Nombre: " + nombres); // Imprime el nombre completo.
+        System.out.println("Apellido: " + apellidos); // Imprime el apellido completo.
+        System.out.println("Edad: " + edad); // Imprime la edad.
+        System.out.println("Año de Nacimiento: " + fechaNacimiento); // Imprime el año de nacimiento.
     }
 }
+
